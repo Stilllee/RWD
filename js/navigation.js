@@ -1,7 +1,3 @@
-(function () {
-  // ESC 키를 누를 때 그리드 보이기 / 감추기
-  document.addEventListener('keyup', function (event) {
-    // ESC만으로 그리드를 켜고 끄는 기능을 사용하면, 다른 곳에서 ESC를 사용할 수 없는 문제. Shift + ESC로 문제 완화
     if (event.shiftKey && (event.key === 'Escape' || event.keyCode === 27)) {
       document.body.classList.toggle('gridShow');
     }(function () {
