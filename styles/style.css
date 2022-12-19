@@ -97,6 +97,87 @@ input[type="search"] {
   font-weight: 700;
 }
 
+/* 공통 메인 콘텐츠 */
+.appMain {
+  display: grid;
+  gap: var(--spacing-base);
+  padding: var(--spacing-base) var(--spacing-lg);
+}
+
+/* 공통 메인 콘텐츠 섹션 제목 */
+[class*="__title"] {
+  margin-bottom: var(--spacing-base);
+}
+
+.appMain [class*="__koTitle"] {
+  font-size: var(--text-md);  
+  font-weight: 700;
+}
+
+.sprite{
+  background: url("../images/sprite_main.png") no-repeat;
+  height: 3.75rem;
+  padding-left: 4rem;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+}
+
+.accentBook {
+  color: var(--accent-book);
+}
+.accentNews {
+  color: var(--accent-news);
+}
+.accentBoard {
+  color: var(--accent-board);
+}
+.accentFavorite {
+  color: var(--accent-favorite);
+}
+.accentTwitter {
+  color: var(--accent-twitter);
+}
+
+
+.spriteBook {
+  background-position: 0 0;
+}
+.spriteNews {
+  background-position: 0 -230px;
+}
+.spriteBoard {
+  background-position: 0 -115px;
+}
+.spriteFavorite {
+  background-position: 0 -345px;
+}
+.spriteTwitter {
+  background-position: 0 -460px;
+}
+
+/* 공통 추천서적 */
+.book {
+  grid-area: book;
+}
+/* 공통 새소식 */
+.news {
+  grid-area: news;
+}
+/* 공통 게시판 */
+.board {
+  grid-area: board;
+}
+/* 공통 인기사이트 */
+.favorite {
+  grid-area: favorite;
+}
+/* 공통 트위터 */
+.twitter {
+  grid-area: twitter;
+}
+
+
 /* 모바일 디바이스 (Mobile Device) */
 @media (min-width: 320px) and (max-width: 768px) {
   /* 모바일 헤더 */
@@ -203,7 +284,18 @@ input[type="search"] {
   .menu.is--active .menu__list {
     transform: none;
   }
-
+  /* 모바일 메인 콘텐츠 */
+  .appMain {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    /* rows auto는 계속 생성되기 때문에 생략해도 됨. 그냥 한 번 써준 것. */
+    grid-template-areas: 
+    "book"
+    "news"
+    "board"
+    "favorite"
+    "twitter";
+  }
 }
 
 /* 데스크탑 디바이스 (Desktop Device) */
@@ -258,6 +350,21 @@ input[type="search"] {
     font-size: 1.2rem;
     font-weight: 700;
     text-shadow: 1px 1px 0 var(--black), -1px -1px 0 var(--black);
+  }
+
+  /* 데스크탑 메인 콘텐츠 */
+  .appMain {
+    /* 이미 공통에 grid를 주었으니 따로 줄 필요가 없음 */
+    max-width: var(--container-width);
+    margin-left: auto;
+    margin-right: auto;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "news news news news news news news news news news news news"
+    "book book book book twitter twitter twitter twitter twitter favorite favorite favorite"
+    "book book book book . board board board board board board board"
+    ;
   }
 }
 
