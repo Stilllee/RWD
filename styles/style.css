@@ -177,6 +177,20 @@ input[type="search"] {
   line-height: 1.6;
 }
 
+.book__info {
+  text-align: center;
+  margin-top: var(--spacing-base);
+}
+
+.book__info * {
+  display: inline;
+}
+
+.ratingStar {
+  display: block;
+  font-size: var(--text-xl);
+}
+
 /* 공통 새소식 */
 .news {
   grid-area: news;
