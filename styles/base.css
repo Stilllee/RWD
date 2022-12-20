@@ -28,7 +28,8 @@ img {
   height: auto;
 }
 
-video {
+video,
+iframe {
   width: 100%;
   height: auto;
 }
