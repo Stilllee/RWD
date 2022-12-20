@@ -276,7 +276,6 @@ input[type="search"] {
   height: 50px;
   max-width: 110px;
   margin-left: var(--spacing-xs);
-  shape-outside: circle(50%);
 }
 
 .twitter__userProfileImage {
