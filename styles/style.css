@@ -218,7 +218,27 @@ input[type="search"] {
 /* 공통 게시판 */
 .board {
   grid-area: board;
+  background: crimson;
 }
+
+.board__title {
+}
+
+.board__list {
+}
+
+.board__item {
+}
+
+.board__link {
+}
+
+.board__date {
+}
+
+.board__more {
+}
+
 /* 공통 인기사이트 */
 .favorite {
   grid-area: favorite;
