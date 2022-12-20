@@ -108,8 +108,11 @@ input[type="search"] {
 }
 
 /* 공통 메인 콘텐츠 섹션 제목 */
-[class*="__title"] {
+.appMain [class*="__title"] {
   margin-bottom: var(--spacing-base);
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
 }
 
 .appMain [class*="__koTitle"] {
@@ -124,6 +127,22 @@ input[type="search"] {
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
+}
+
+.spriteBook {
+  background-position: 0 0;
+}
+.spriteNews {
+  background-position: 0 -230px;
+}
+.spriteBoard {
+  background-position: 0 -115px;
+}
+.spriteFavorite {
+  background-position: 0 -345px;
+}
+.spriteTwitter {
+  background-position: 0 -460px;
 }
 
 .accentBook {
@@ -142,20 +161,10 @@ input[type="search"] {
   color: var(--accent-twitter);
 }
 
-.spriteBook {
-  background-position: 0 0;
-}
-.spriteNews {
-  background-position: 0 -230px;
-}
-.spriteBoard {
-  background-position: 0 -115px;
-}
-.spriteFavorite {
-  background-position: 0 -345px;
-}
-.spriteTwitter {
-  background-position: 0 -460px;
+/* 공통 메인 콘텐츠 섹션 본문 */
+.appMain [class*="__summary"] {
+  line-height: 1.6;
+  margin-top: var(--spacing-base);
 }
 
 /* 공통 추천서적 */
