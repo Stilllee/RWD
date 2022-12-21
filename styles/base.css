@@ -33,8 +33,6 @@ video {
   height: auto;
 }
 
-/* 가로가 100%일 때 세로는 56.25% */
-
 /* 반응형 Iframe */
 
 .iframeRatio-21-9 {
